@@ -1,0 +1,109 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #ebebeb;
+    margin: auto;
+}
+
+#wrapper {
+    color: #000066;
+    background-color: #ebebeb;
+    width: 100%;
+    margin: auto;
+}
+
+a {
+    color: rgb(3, 0, 0);
+    text-decoration: none;
+}
+
+p {
+    color: black;
+}
+
+header {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #00005D;
+    background-image: url(locations/Siem_Riep/Siem_Reap_1.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    padding-bottom: 5em;
+    height: 30%;
+    width: 100%;
+}
+
+header h1 {
+    padding-left: 80px;
+    padding-top: 30px;
+    margin: 0;
+}
+
+header span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 95%;
+    color: darkblue;
+    padding-left: 120px;
+    margin-top: -0.5em;
+}
+
+nav {
+    background-color: #469AE3;
+    letter-spacing: 0.1em;
+    word-spacing: 0.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 3em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    padding: 0.5em;
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+}
+
+nav a:link {
+    color: #ffffff;
+}
+
+nav a:visited {
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #0053f9;
+}
+
+main {
+    background-color: #ebebeb;
+    color: #000000;
+    padding: 10px 20px;
+    overflow: auto;
+    min-height: 400px;
+    width: 80%;
+    margin: auto;
+    min-width: 940px;
+}
+
+h2 {
+    color: #869dc7;
+    font-family: arial, sans-serif;
+    margin: 5px;
+    text-align: center;
+}
+
+footer {
+    font-size: 70%;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
