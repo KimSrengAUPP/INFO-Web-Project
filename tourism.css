@@ -101,6 +101,181 @@ h2 {
     text-align: center;
 }
 
+.pod1:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod1 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod1 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Kompong_Thom/Kompong_Thom.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod2:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod2 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod2 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Kirirom/Kirirom.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod3:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod3 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod3 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Kompot/Kampot.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod4:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod4 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod4 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Mondulkiri/Mondulkiri.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod5:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod5 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod5 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Phnom_Penh/Phnom_Penh.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod6:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod6 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod6 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Siem_Riep/Siem_Reap.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
+.pod7:hover {
+    top: -4px;
+    transform: translateY(-4px);
+}
+
+.pod7 h4 {
+    padding-top: 200px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.pod7 a {
+    float: left;
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    background-image: url(locations/Sihanoukville/Sihanoukville.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 32px;
+
+}
+
 footer {
     font-size: 70%;
     text-align: center;
