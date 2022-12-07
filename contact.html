@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tour.html">Tour</a></li>
+                <li><a href="tips.html">Tips</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -37,7 +38,21 @@
                 <li>Address: 353E Monivong Blvd, Khan Daun Penh, Phnom Penh, Cambodia</li>
             </ul>
             <p>You may also use the form below to contact us as well.</p>
-            
+            <div class="contact">
+                <form method="get">
+                    <fieldset>
+                        <label for="fname">First Name: </label><br>
+                        <input type="text" name="fname" id="fname" required placeholder="First Name"><br><br>
+                        <label for="lname">Last Name: </label><br>
+                        <input type="text" name="lname" id="lname" required placeholder="Last Name"><br><br>
+                        <label for="email">Email Address: </label><br>
+                        <input type="email" name="email" id="email" required placeholder="email@address.com"><br><br>
+                        <label for="comments">Comments: </label><br>
+                        <textarea name="comments" id="comments" rows="8" cols="72" required placeholder="Comments or suggestions"></textarea><br><br>
+                        <input id="submit" type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
         </main>
         <footer>Copyright &copy; 2022
         </footer>

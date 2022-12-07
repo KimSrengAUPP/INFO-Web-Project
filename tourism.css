@@ -91,7 +91,6 @@ main {
     min-height: 400px;
     width: 80%;
     margin: auto;
-    min-width: 940px;
 }
 
 .button a:link,
@@ -114,6 +113,13 @@ h2 {
     font-family: arial, sans-serif;
     margin: 5px;
     text-align: center;
+}
+
+.allpods{
+    display:flex;
+    flex-direction:row; 
+    flex-wrap:wrap; 
+    justify-content:space-around; 
 }
 
 .pod1:hover {
@@ -233,7 +239,7 @@ h2 {
     width: 280px;
     height: 350px;
     background-color: white;
-    background-image: url(locations/Phnom_Penh/Phnom_Penh_2_Independence.jpeg);
+    background-image: url(locations/Phnom_Penh/Phnom_Penh\_2_Independence.jpeg);
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 20px;
@@ -314,4 +320,29 @@ footer {
     height: 100%;
     max-width: 30%;
     max-height: 40%;
+}
+
+.contact{
+    width:40%
+} 
+
+input[type=text], input[type=email], textarea, input[type=submit] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 4px 0px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    border:none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #7cc2ff;
+}
+
+input[type=submit]:hover {
+    background-color: #73b4ee;
 }
