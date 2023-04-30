@@ -6,85 +6,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mondulkiri</title>
-    <link href="../../tourism.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../../style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../tour.html">Tour</a></li>
-                <li><a href="../../tips.html">Tips</a></li>
-                <li><a href="../../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Laid-Back Travel</h1>
-            <span>Travel in Cambodia with ease</span>
-        </header>
-        <main>
-            <h1>Mondulkiri</h1>
-            <p>Mondulkiri is an eastern province of Cambodia, which is the most sparsely populated province in the whole
-                country although being the largest province in Cambodia. The province is chock full of natural beauty,
-                with thickly forested mountains, powerful waterfalls and the lush green rolling hills of the western
-                side.</p>
-            <p>Despite the growing deforestation, especially due to the valuable minerals remaining in the deep
-                red, fertile ground, Mondulkiri has still one of the biggest successional woodlands of Cambodia. Except
-                being in Sen Monorom, you'll find deep pure jungle, with a huge variety of flora and fauna. You may also
-                find gigantic and beautiful waterfalls, where you can take an empowering shower, such as the impressive
-                Bou Sraa.</p>
-            <p>Sen Monorom is the provincial capital and doesn't show up as a typical Cambodian town, while
-                it is the only town the province has to speak of. With approx. 7500 inhabitants, 20 guesthouses, 12
-                restaurants, 3 bars and no post office it is often compared to American Wild West frontier towns.
-                Concerning the quietness and beauty of Sen Monorom people from other parts of the country move here and
-                therefore the land price doubled from 2006 to 2007.</p>
-            <p>The town of Sen Monorom is the best base camp for
-                travellers who want to explore the surrounding areas. A quiet but beautiful town nestled into the hills;
-                it has a lot of potential to develop into a centre for non-intrusive eco-tourism. At present, it's very
-                undeveloped, which gives you a feeling of going somewhere off the beaten tourist trail. Add to that the
-                communities of hill tribe people, who are not affected by mass-tourism, as they are in neighbouring
-                Thailand, and you have an area that is very attractive to the adventure traveller.</p>
-            <p>Also interesting is
-                the variety of languages being used: Khmer, hill tribe languages, Vietnamese and Lao. 80 percent of the
-                population in Mondulkiri is made up of ten tribal minorities, with the majority of them being the
-                Chunchiet from the tribe of the Phnong. The remaining 20 percent are Khmer, Chinese and Muslim Cham.
-                Most of the population lives off the land, planting rice, fruit trees and a variety of vegetables.
-                Others grow, coffee, strawberries, rubber and cashew nuts.</p>
-            <p>More and more houses are built in the
-                typical Khmer style. Visiting the hill tribes you still can find the traditional Phnong houses. In the
-                houses you can find traditional gongs and big jars, whereby the last ones are said to be more than a
-                thousand years old. There are various sorts of gongs used for different occasions. Jars and gongs are
-                among the most valuable possessions in an indigenous community, whether in traditional, spiritual or
-                material terms. During the Khmer Rouge Regime those objects were buried in hidden places in the jungle
-                and in many cases they still wait in the ground.</p>
-            <h3>Boosra Waterfalls</h3>
-            <img id="KT1" src="Mondulkiri_2_Boosra.jpg" alt="Boosra" width="100" height="100">
-            <p>Locates at Pich Chinda District in 43 kilometer distance from the provincial town by red soil road. The
-                double-drop waterfall is very popular with the locals who use it as a bathing and picnic spot. Its top
-                level is around 10m in height, and the lower level drops down 25m to the gorge. It is in a scenic and
-                pristine setting and offers great photo ops. Nearby is the ethnic Phnong village called Pichinda which
-                has a small guesthouse. Some snacks are available at the falls, but bring food if you would like
-                something more substantial. Then we head northeast to Bou Sra. We never rode north on this road before
-                and I am surprised that right behind the first hill it is getting rougher than most we have seen
-                yesterday. We cross a small river on an improvised bridge and are charged 500 Riel each by a bunch of
-                kids.</p>
-            <p>Boo
-                Sra is the most beautiful waterfall in Modulkiri and shared into three stages:
+    <header>
 
-                First stage: The waterfall has 15-meter diameter and 15-meter to 20-meter height in rainy season, and
-                20-meter diameter and 18-meter to 25-meter height in dry season. The second stage of waterfall has
-                150-meter distance from the first stage.
-                Second stage: The waterfall has 23-meter diameter and 15-meter to 20-meter height in rainy season, and
-                20-meter diameter and 18-meter to 25-meter height in dry season. The second stage of waterfall has
-                150-meter distance from the first stage.
-                Third stage: The waterfall has stronger speed than the second stage. This stage can not be reached
-                because it locates in the thick forest, lacks of transporting mean and is dangerous due to having
-                fierce-wild animals.</p>
-        </main>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="../../index.html" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a href="../../index.html#home">Home</a>
+            <a href="../../index.html#packages">Packages</a>
+            <a href="../../index.html#locations">Locations</a>
+            <a href="../../index.html#review">Review</a>
+            <a href="../../index.html#contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="">
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+            <p>Forget password? <a href="#">Click Here</a></p>
+            <p>Don't have an account? <a href="#">Register Now</a></p>
+        </form>
+
     </div>
-    <footer>Copyright &copy; 2022
-    </footer>
+    <section class="location-section" id="Mondulkiri">
+        <h2 class="location-title">Mondulkiri</h2>
+        <p>Mondulkiri is an eastern province of Cambodia, which is the most sparsely populated province in the whole
+            country although being the largest province in Cambodia. The province is chock full of natural beauty,
+            with thickly forested mountains, powerful waterfalls and the lush green rolling hills of the western
+            side.
+            <br><br>
+            Despite the growing deforestation, especially due to the valuable minerals remaining in the deep
+            red, fertile ground, Mondulkiri has still one of the biggest successional woodlands of Cambodia. Except
+            being in Sen Monorom, you'll find deep pure jungle, with a huge variety of flora and fauna. You may also
+            find gigantic and beautiful waterfalls, where you can take an empowering shower, such as the impressive
+            Bou Sraa.
+            <br><br>
+            Sen Monorom is the provincial capital and doesn't show up as a typical Cambodian town, while
+            it is the only town the province has to speak of. With approx. 7500 inhabitants, 20 guesthouses, 12
+            restaurants, 3 bars and no post office it is often compared to American Wild West frontier towns.
+            Concerning the quietness and beauty of Sen Monorom people from other parts of the country move here and
+            therefore the land price doubled from 2006 to 2007.
+            <br><br>
+            The town of Sen Monorom is the best base camp for
+            travellers who want to explore the surrounding areas. A quiet but beautiful town nestled into the hills;
+            it has a lot of potential to develop into a centre for non-intrusive eco-tourism. At present, it's very
+            undeveloped, which gives you a feeling of going somewhere off the beaten tourist trail. Add to that the
+            communities of hill tribe people, who are not affected by mass-tourism, as they are in neighbouring
+            Thailand, and you have an area that is very attractive to the adventure traveller.
+            <br><br>
+            Also interesting is
+            the variety of languages being used: Khmer, hill tribe languages, Vietnamese and Lao. 80 percent of the
+            population in Mondulkiri is made up of ten tribal minorities, with the majority of them being the
+            Chunchiet from the tribe of the Phnong. The remaining 20 percent are Khmer, Chinese and Muslim Cham.
+            Most of the population lives off the land, planting rice, fruit trees and a variety of vegetables.
+            Others grow, coffee, strawberries, rubber and cashew nuts.
+            <br><br>
+            More and more houses are built in the
+            typical Khmer style. Visiting the hill tribes you still can find the traditional Phnong houses. In the
+            houses you can find traditional gongs and big jars, whereby the last ones are said to be more than a
+            thousand years old. There are various sorts of gongs used for different occasions. Jars and gongs are
+            among the most valuable possessions in an indigenous community, whether in traditional, spiritual or
+            material terms. During the Khmer Rouge Regime those objects were buried in hidden places in the jungle
+            and in many cases they still wait in the ground.
+            <br><br>
+            <img id="KT1" src="Mondulkiri_2_Boosra.jpg" alt="Boosra" width="100" height="100">
+            Locates at Pich Chinda District in 43 kilometer distance from the provincial town by red soil road. The
+            double-drop waterfall is very popular with the locals who use it as a bathing and picnic spot. Its top
+            level is around 10m in height, and the lower level drops down 25m to the gorge. It is in a scenic and
+            pristine setting and offers great photo ops. Nearby is the ethnic Phnong village called Pichinda which
+            has a small guesthouse. Some snacks are available at the falls, but bring food if you would like
+            something more substantial. Then we head northeast to Bou Sra. We never rode north on this road before
+            and I am surprised that right behind the first hill it is getting rougher than most we have seen
+            yesterday. We cross a small river on an improvised bridge and are charged 500 Riel each by a bunch of
+            kids.
+            <br><br>
+            Boosra is the most beautiful waterfall in Modulkiri and shared into three stages:
+
+            First stage: The waterfall has 15-meter diameter and 15-meter to 20-meter height in rainy season, and
+            20-meter diameter and 18-meter to 25-meter height in dry season. The second stage of waterfall has
+            150-meter distance from the first stage.
+            Second stage: The waterfall has 23-meter diameter and 15-meter to 20-meter height in rainy season, and
+            20-meter diameter and 18-meter to 25-meter height in dry season. The second stage of waterfall has
+            150-meter distance from the first stage.
+            Third stage: The waterfall has stronger speed than the second stage. This stage can not be reached
+            because it locates in the thick forest, lacks of transporting mean and is dangerous due to having
+            fierce-wild animals.
+        </p>
+    <div id="map"></div>
+    </section>
+    
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="../../index.html#home">Home</a>
+                <a href="../../index.html#packages">Packages</a>
+                <a href="../../index.html#locations">Locations</a>
+                <a href="../../index.html#review">Review</a>
+                <a href="../../index.html#contact">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+
+    <script src="../../script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" ></script>
+    <script>initMap(12.46, 107.18, 12)</script>
 </body>
+
 
 </html>

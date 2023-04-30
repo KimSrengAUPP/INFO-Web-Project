@@ -3,89 +3,480 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link href="tourism.css" rel="stylesheet">
-</head>
+    <title>Laid-Back Travel</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
 
 <body>
-    <div id="wrapper">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tour.html">Tour</a></li>
-                <li><a href="tips.html">Tips</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Laid-Back Travel</h1>
-            <span>Travel in Cambodia with ease</span>
-        </header>
 
-        <main>
-            <h2>Laid-Back Travel</h2>
-            <p>Cambodia, officially Kingdom of Cambodia , Country, Southeast Asia. Area: 181,035 sq km.
-                Population is around 16 million people. The capital is Phnom Penh. The vast majority of the
-                population
-                belongs to the
-                Khmer ethnic group, and Khmer is the official language. The official religions is Buddhism; as well
-                as
-                traditional beliefs.
-                Cambodian use riel as currency. The landscape is dominated by large central plains; the Dangrek
-                Mountains
-                rise along the
-                northern border. Cambodia lies largely in the basin of the Mekong River; the large lake Tonle Sap is
-                in its
-                western part. Much of the country is tropical forest.Cambodia
-                is a constitutional monarchy with two legislative houses; its head of state is the king, and its
-                head of
-                government is the prime minister.</p>
-            <p>Cambodia may be a small country, but it offers everything one needs for a wonderful vacation. Above
-                the many reasons why most visitors return to visit time and again, are two that many would find
-                difficult to match elsewhere. Firstly, Cambodia offers an incredible amount
-                of history and culture and its nature is simply amazing to say the least; ranging from the gorgeous
-                National Parks to the pristine beaches and relaxing islands, the flavours of Cambodia are not only
-                in the exotic cuisines, but also its overall ambience.</p>
-            <br>
-            <p>We, at Laid-Back Travel, will guide you around this country and provide you with the best that we
-                could
-                offer. From amazing food to wonderful places to visit, we will provide you with a guide to all of
-                it, so
-                that you can have a <b>laid-back travel</b>.</p>
-            <h2>Feature Locations</h2>
-            <div class="allpods">
-                <div class="pod1">
-                    <a href="locations/Kompong_Thom/KompongThom.html">
-                        <h4>Kompong Thom</h4>
-                        <p>Kompong Thom is Cambodia's second largest province by area. Its capital is named Kampong Thom, a
-                            picturesque town on the banks of the Stung Saen River...</p>
-                    </a>
-                </div>
-                <div class="pod2">
-                    <a href="locations/Kirirom/Kirirom.html">
-                        <h4>Kirirom</h4>
-                        <p>Located at Phnom Sruoch district in the province of Kampong Speu, Kirirom National Park is
-                            established on a seven hundred meters hill covering an area of over thirty five thousand...</p>
-                    </a>
-                </div>
-                <div class="pod3">
-                    <a href="locations/Kompot/Kompot.html">
-                        <h4>Kompot</h4>
-                        <p>This province is located in the Southwest of the country, having an eighty kilometres coastal
-                            strip with the Gulf of Thailand. The provincial capital is named...</p>
-                    </a>
-                </div>
-            </div>
-        </main>
-        <div class="button">
-            <a href="tour.html">See all tours</a>
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="index.html" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#locations">Locations</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
         </div>
-        <footer>Copyright &copy; 2022
-        </footer>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="">
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+            <p>Forget password? <a href="#">Click Here</a></p>
+            <p>Don't have an account? <a href="#">Register Now</a></p>
+        </form>
 
     </div>
+
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Laid-Back Travel</h3>
+            <p>Travel in Cambodia with Ease</p>
+            <a href="#" class="btn">Discover More</a>
+        </div>
+
+        <div class="controls">
+            <span class="vid-btn active" data-src="images/vid1.mp4"></span>
+            <span class="vid-btn" data-src="images/vid2.mp4"></span>
+            <span class="vid-btn" data-src="images/vid3.mp4"></span>
+            <span class="vid-btn" data-src="images/vid4.mp4"></span>
+            <span class="vid-btn" data-src="images/vid5.mp4"></span>
+        </div>
+
+        <div class="video-container">
+            <video src="images/vid1.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>P</span>
+            <span>A</span>
+            <span>C</span>
+            <span>K</span>
+            <span>A</span>
+            <span>G</span>
+            <span>E</span>
+            <span>S</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/p-1.jpeg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> World Heritage </h3>
+                    <p>Phnom Penh, Preah Vihear, Kompong Thom</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/p-2.webp" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Beaches </h3>
+                    <p>Kompot, Sihanoukville</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/p-3.jpeg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Ultimate Tour </h3>
+                    <p>Phnom Penh, Siem Reap, Sihanoukville, Kompong Thom, Kirirom, Kompot</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/p-4.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Classic </h3>
+                    <p>Phnom Penh, Siem Reap</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/p-5.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Best of Cambodia </h3>
+                    <p>Phnom Penh, Kompong Thom, Sihanoukville, Siem Reap, Kompot</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/p-6.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Cambodia Intro </h3>
+                    <p>Phnom Penh, Siem Reap, Sihanoukville</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- locations section starts  -->
+
+    <section class="locations" id="locations">
+
+        <h1 class="heading">
+            <span>L</span>
+            <span>O</span>
+            <span>C</span>
+            <span>A</span>
+            <span>T</span>
+            <span>I</span>
+            <span>O</span>
+            <span>N</span>
+            <span>S</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/g-1.jpg" alt="">
+                <div class="content">
+                    <h3>Kompot</h3>
+                    <p>This Province Is Located In The Southwest Of The Country, Having An Eighty</p>
+                    <a href="locations/Kompot/Kompot.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-2.jpg" alt="">
+                <div class="content">
+                    <h3>Kirirom</h3>
+                    <p>Located At Phnom Sruoch District In The Province Of Kampong Speu, Kirirom</p>
+                    <a href="locations/Kirirom/Kirirom.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-3.jpg" alt="">
+                <div class="content">
+                    <h3>Kompong Thom</h3>
+                    <p>Kampong Thom Is Cambodia's Second Largest Province By Area. Its Capital Is Named</p>
+                    <a href="locations/Kompong_Thom/KompongThom.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-4.png" alt="">
+                <div class="content">
+                    <h3>Mondulkiri</h3>
+                    <p>Mondulkiri Is An Eastern Province Of Cambodia, Which Is The Most Sparsely</p>
+                    <a href="locations/Mondulkiri/Mondulkiri.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-5.jpeg" alt="">
+                <div class="content">
+                    <h3>Phnom Penh</h3>
+                    <p>Phnom Penh Is The Vibrant Bustling Capital Of Cambodia. Situated At The Confluence</p>
+                    <a href="locations/Phnom_Penh/PhnomPenh.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-6.jpeg" alt="">
+                <div class="content">
+                    <h3>Siem Reap</h3>
+                    <p>Siem Reap Province Is Located In Northwest Cambodia. It Is The Major Tourist</p>
+                    <a href="locations/Siem_Reap/SiemReap.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-7.jpg" alt="">
+                <div class="content">
+                    <h3>Sihanoukville</h3>
+                    <p>'Beach Town', 'Port Community', 'Fledgling Resort Destination' - All Describe</p>
+                    <a href="locations/Sihanoukville/Sihanoukville.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-8.jpg" alt="">
+                <div class="content">
+                    <h3>Battambang</h3>
+                    <p>Cambodia's Second Largest City Lies In The Heart Of The Northwest And Until</p>
+                    <a href="locations/Battambang/Battambang.html" class="btn">See More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-9.jpg" alt="">
+                <div class="content">
+                    <h3>Preah Vihear</h3>
+                    <p>In The 6th Century, King Yasovarmamn I ( 889-900) Began Work On The Original</p>
+                    <a href="locations/Preah_Vihear/PreahVihear.html" class="btn">See More</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- locations section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>R</span>
+            <span>E</span>
+            <span>V</span>
+            <span>I</span>
+            <span>E</span>
+            <span>W</span>
+        </h1>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic1.jpg" alt="">
+                        <h3>Kim Sreng</h3>
+                        <p>We found this tours in internet with good recommendations and we had contacted to them, we
+                            chosen 7 days tours around Tonle sap and start from Siem Reap to Battambang und Phnom Penh,
+                            all the services were very nice and reliable.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic2.jpg" alt="">
+                        <h3>Um Sothea</h3>
+                        <p>We went around Cambodia that we started tours in capital city of Cambodia in Phnom Penh and
+                            visited royal palace and then we went to Battambang , Siem Reap, Kampong Thom,
+                            Sihanoukville, it was very wonderful trip and great experiences.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic3.png" alt="">
+                        <h3>Ngen Ty</h3>
+                        <p>Our first time to cambodia and we booked through( about cambodia travel & tours ) it was very
+                            good organized and we had 15 days around cambodia. we started from phnom pen to siem reap
+                            angkor also along mekong delta and sihanoukville.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic4.jpg" alt="">
+                        <h3>Konata</h3>
+                        <p>Absolutely amazing temples in Angkor temples and we had fantastic guide Sokleng, he gave us
+                            great experiences, he knew perfect time to visit the temples and escape from crowds and
+                            showed us amazing places. We learned a lot about Cambodia history.
+                        </p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">
+            <span>C</span>
+            <span>O</span>
+            <span>N</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>T</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/contact-img.svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" value="Send Message">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#packages">Packages</a>
+                <a href="#locations">Locations</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
 
 </body>
 
