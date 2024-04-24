@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laid-Back Travel - Admin Page - Booking Update</title>
+
+    <script>
+        function setStatus(status) {
+            document.getElementById("status").value = status;
+        }
+    </script>
+
+</head>
+<body>
+    <div align="center">
+        <a th:href="@{/admin/booking_list}">Back to bookings page</a>
+        <h2 th:inline="text">Update Booking</h3>
+        <br>
+        <br>
+        <form action="#" th:action="@{/admin/updatebooking}" th:object="${booking}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Booking ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+				</tr>			
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" th:field="*{email}"/></td>
+				</tr>				
+				<tr>
+					<td>Phone:</td>
+					<td><input type="text" th:field="*{phone}"/></td>
+				</tr>				
+				<tr>
+					<td>Travel Package:</td>
+					<td><input type="text" th:field="*{travelPackage}"/></td>
+				</tr>
+                <tr>
+					<td>Date:</td>
+					<td><input type="date" th:field="*{date}"/></td>
+				</tr>
+				<tr>
+					<td>Status:</td>
+					<td><input id="status" type="text" th:field="*{status}"/></td>
+                    <td colspan="2"><button type="button" onclick="setStatus('Approved')">Approve</button></td>
+                    <td colspan="2"><button type="button" onclick="setStatus('Denied')">Deny</button></td>
+				</tr>				
+				<tr>
+                    <td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+    </div>
+
+</body>
+</html>

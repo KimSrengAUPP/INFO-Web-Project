@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/style.css">
+
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a th:href="@{index}" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a th:href="@{index#home}">Home</a>
+            <a th:href="@{index#packages}">Packages</a>
+            <a th:href="@{index#locations}">Locations</a>
+            <a th:href="@{index#review}">Review</a>
+            <a th:href="@{index#contact}">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form th:action="@{/logout}" method="post">
+            <h3  th:inline="text">Logged in as [[${#httpServletRequest.remoteUser}]]</h3>
+            <p sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/admin}">Admin Page</a></p>
+            <input type="submit" value="Logout" class="btn">
+        </form>
+
+    </div>
+
+    <section class="location-section">
+        <h2 class="location-title">ERROR</h2>
+        <p> 
+            <strong>Error 403:</strong>
+            <br><br>
+            You don't have permission to see this page!
+            <br><br>
+            If you think this is a mistake please use our contact feature in the home page.
+            <br><br>
+            Sorry for the incovenience.
+        </p>
+    
+    </section>
+    
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a th:href="@{index#home}">Home</a>
+                <a th:href="@{index#packages}">Packages</a>
+                <a th:href="@{index#locations}">Locations</a>
+                <a th:href="@{index#review}">Review</a>
+                <a th:href="@{index#contact}">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/script.js"></script>
+
+</body>
+
+</html>

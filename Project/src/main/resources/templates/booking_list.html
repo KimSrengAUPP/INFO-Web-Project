@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laid-Back Travel - Admin Page - Booking List</title>
+</head>
+<body>
+    <div align="center">
+        <a th:href="@{/admin}">Back to admin page</a>
+        <h2 th:inline="text">Bookings Page</h3>
+        <br>
+        <br>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Travel Package</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="booking : ${bookings}">
+                    <td th:text="${booking.id}">Booking ID</td>
+                    <td th:text="${booking.name}">Name</td>
+                    <td th:text="${booking.email}">Email</td>
+                    <td th:text="${booking.phone}">Phone</td>
+                    <td th:text="${booking.travelPackage}">Travel Package</td>
+                    <td th:text="${#dates.format(booking.date, 'dd MMM, yyyy')}">Date</td>
+                    <td th:text="${booking.status}">Status</td>
+                    <td><a th:href="@{'/admin/booking_list/booking_update/' + ${booking.id}}">Update</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <style>
+        .booking-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .booking-section .row .image{
+            flex: 1 1 35rem;
+        }
+        
+        .booking-section .row .image img{
+            width: 60%;
+        }
+
+        .booking-section .row form {
+            flex: 1 1 50rem;
+            padding: 2rem;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+            border-radius: .5rem;
+        }
+
+        .booking-section .row form .inputBox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .booking-section .row .inputBox input,
+        .booking-section .row .inputBox select {
+            width: 49%;
+            margin: 1rem 0;
+            padding: 1rem;
+            font-size: 1.7rem;
+            color: #333;
+            background: #f7f7f7;
+            text-transform: none;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 20%;
+            padding: 1rem;
+            font-size: 1.7rem;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a th:href="@{index}" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a th:href="@{index#home}">Home</a>
+            <a th:href="@{index#packages}">Packages</a>
+            <a th:href="@{index#locations}">Locations</a>
+            <a th:href="@{index#review}">Review</a>
+            <a th:href="@{index#contact}">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form th:action="@{/logout}" method="post">
+            <h3  th:inline="text">Logged in as [[${#httpServletRequest.remoteUser}]]</h3>
+            <p sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/admin/}">Admin Page</a></p>
+            <input type="submit" value="Logout" class="btn">
+        </form>
+
+    </div>
+    <br><br><br><br>
+    <section class="booking-section">
+        <h1 class="heading">
+            <span>B</span>
+            <span>O</span>
+            <span>O</span>
+            <span>K</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+        </h1>
+        <div class="row">
+            <form action="#" th:action="@{/savebooking}" th:object="${booking}" method="post">
+                <div class="inputBox">
+                    <input type="text" th:field="*{name}" placeholder="Name" required/>
+                </div>
+                <div class="inputBox">
+                    <input type="email" th:field="*{email}" placeholder="Email" required/>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" th:field="*{phone}" placeholder="Phone" pattern="[0-9]{3}[0-9]{3}[0-9]{3,4}" required/>
+                </div>
+
+
+                <div class="inputBox">
+                    <select th:field="*{travelPackage}" required>
+                        <option value="" disabled selected>Select Package</option>
+                        <option value="world heritage">World Heritage</option>
+                        <option value="beaches">Beaches</option>
+                        <option value="ultimate tour">Ultimate Tour</option>
+                        <option value="classic">Classic</option>
+                        <option value="best of cambodia">Best of Cambodia</option>
+                        <option value="cambodia intro">Cambodia Intro</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <input type="date" th:field="*{date}" placeholder="yyyy-MM-dd" required/>
+                </div>
+
+                <input type="submit" value="Submit" class="btn" />
+            </form>
+
+            <div class="image">
+                <img src="images/booking-img.jpg" alt="">
+            </div>
+        </div>        
+    </section>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a th:href="@{index#home}">Home</a>
+                <a th:href="@{index#packages}">Packages</a>
+                <a th:href="@{index#locations}">Locations</a>
+                <a th:href="@{index#review}">Review</a>
+                <a th:href="@{index#contact}">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreahVihear</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a th:href="@{index}" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a th:href="@{index#home}">Home</a>
+            <a th:href="@{index#packages}">Packages</a>
+            <a th:href="@{index#locations}">Locations</a>
+            <a th:href="@{index#review}">Review</a>
+            <a th:href="@{index#contact}">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form th:action="@{/logout}" method="post">
+            <h3  th:inline="text">Logged in as [[${#httpServletRequest.remoteUser}]]</h3>
+            <p sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/admin}">Admin Page</a></p>
+            <input type="submit" value="Logout" class="btn">
+        </form>
+
+    </div>
+    
+    <section class="location-section" id="PreahVihear">
+        <h2 class="location-title">Preah Vihear</h2>
+        <p> In the 6th century, King Yasovarmamn I ( 889-900) began work on the original dedicated to Shisa as result of
+            spiritual development, increased political prestige and economic growth was naturally reflected in the
+            Temple undergoing more than 300 years of consultation with deal of remodeling under subsequent King
+            Suryavarman II ( 1113 - 1150) this increased prestige naturally changed the original small sanctuary into
+            one of the greatest Khmer temples of all times. This ranking was the result of the finest in situ carving
+            that depicted the highest standards of unique Khmer architecture.
+            <br><br>
+            Under the Franco-Siamese Treaty of 1904 and 1907, the line of frontier between Cambodia and Thai along the
+            Dongrak Mountains followed justice at the Hague officially found that the Preah Vihear Temple situated
+            inside the Cambodia territory.
+            <br><br>
+            <img th:class="images" id="KT1" src="images/PreahVihear_1.jpg" alt="PreahVihear" width="100" height="100">
+            Preah Vihear Temple is located in a pleasant environment with an attractive countryside slightly east of the
+            mid section of the Dongrek Mountains.
+            <br><br>
+            It is perched on the edge of a giant cliff, about 625 meters above sea level in Preah Vihear Province,
+            Northern part of Cambodia, 625km from the capital city of Phnom Penh. It is also situated close to the
+            Cambodia-Thai border.
+            <br><br>
+            The temple has four levels and four courtyards which comprise of five Gopuras ( entrance pavilions some
+            times surmounted by tower ) This group of building was the King's residence when he came to pay homage to
+            the mighty God, and the two wings were the shelters for the pilgrims. The main temple are used for the
+            high-ranking supreme divinities, this mighty group of building is considered as the center of the whole
+            temple complex.
+            <br><br>
+            The front stone stairway: this main passage is on the North side. The stairway is 8 meters wide and 78
+            meters long,. The fist flight has 162 steps. At the first landing is a large stone singa statue on stone
+            block. Another 54 flight of steps 4 meters wide and 27 meters long leads up to the second landing also
+            decorated with stone signa statue.
+            <br><br>
+            The Nagaraj Courtyard: this stone-paved is 7 meters wide by 31.8 meters long. From here the stairway leads
+            up to the first-level Gropura. The Stairheads are in the form of seven-headed snakes called "Ngu Suang "
+            facing North towards the Prasat. The heads and tails of nagas on both sides look like ordinary snakes,
+            characterizing and early example of this type of animal figures. The head portion of the naga on the west
+            side looks very impressive because it is made from a single solid stone.
+        </p>
+        </div>
+    <div id="map"></div>
+    </section>
+    
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a th:href="@{index#home}">Home</a>
+                <a th:href="@{index#packages}">Packages</a>
+                <a th:href="@{index#locations}">Locations</a>
+                <a th:href="@{index#review}">Review</a>
+                <a th:href="@{index#contact}">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+
+    <script src="../../script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" ></script>
+    <script>initMap(13.8, 104.97, 12)</script>
+</body>
+
+</html>

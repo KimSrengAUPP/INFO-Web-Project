@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laid-Back Travel - Admin Page</title>
+
+</head>
+<body>
+    <div align="center">
+        <a th:href="@{index}">Back to main page</a>
+        <h2 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+        <br>
+        <br>
+        <ul>View database:</ul>
+            <li><a th:href="@{admin/booking_list}">Bookings</a></li>
+            <li><a th:href="@{admin/contact_list}">Contacts</a></li>
+
+    </div>
+
+</body>
+</html>

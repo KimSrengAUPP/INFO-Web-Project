@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laid-Back Travel - Admin Page - Contact List</title>
+</head>
+<body>
+    <div align="center">
+        <a th:href="@{/admin}">Back to admin page</a>
+        <h2 th:inline="text">Contacts Page</h3>
+        <br>
+        <br>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Contact ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Subject</th>
+                    <th>Message</th>	
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="contact : ${contacts}">
+                    <td th:text="${contact.id}">Contact ID</td>
+                    <td th:text="${contact.name}">Name</td>
+                    <td th:text="${contact.email}">Email</td>
+                    <td th:text="${contact.phone}">Phone</td>
+                    <td th:text="${contact.subject}">Subject</td>
+                    <td th:text="${contact.message}">Message</td>
+                    <td th:text="${contact.status}">Status</td>
+                    <td><a th:href="@{'/admin/contact_list/contact_update/' + ${contact.id}}">Update</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

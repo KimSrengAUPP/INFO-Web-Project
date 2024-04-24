@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laid-Back Travel - Admin Page - Contact Update</title>
+
+    <script>
+        function setStatus(status) {
+            document.getElementById("status").value = status;
+        }
+    </script>
+
+</head>
+<body>
+    <div align="center">
+        <a th:href="@{/admin/contact_list}">Back to contacts page</a>
+        <h2 th:inline="text">Update Contact</h3>
+        <br>
+        <br>
+        <form action="#" th:action="@{/admin/updatecontact}" th:object="${contact}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Contact ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+				</tr>			
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" th:field="*{email}"/></td>
+				</tr>				
+				<tr>
+					<td>Phone:</td>
+					<td><input type="text" th:field="*{phone}"/></td>
+				</tr>				
+				<tr>
+					<td>Subject:</td>
+					<td><input type="text" th:field="*{subject}"/></td>
+				</tr>
+                <tr>
+					<td>Message:</td>
+					<td><input type="text" th:field="*{message}"/></td>
+				</tr>
+				<tr>
+					<td>Status:</td>
+					<td><input id="status" type="text" th:field="*{status}"/></td>
+                    <td colspan="2"><button type="button" onclick="setStatus('Read')">Read</button></td>
+				</tr>				
+				<tr>
+                    <td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+    </div>
+
+</body>
+</html>

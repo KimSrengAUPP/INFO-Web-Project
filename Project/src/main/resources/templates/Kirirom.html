@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirirom</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a th:href="@{index}" class="logo"><span>T</span>ravel</a>
+
+        <nav class="navbar">
+            <a th:href="@{index#home}">Home</a>
+            <a th:href="@{index#packages}">Packages</a>
+            <a th:href="@{index#locations}">Locations</a>
+            <a th:href="@{index#review}">Review</a>
+            <a th:href="@{index#contact}">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form th:action="@{/logout}" method="post">
+            <h3  th:inline="text">Logged in as [[${#httpServletRequest.remoteUser}]]</h3>
+            <p sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/admin}">Admin Page</a></p>
+            <input type="submit" value="Logout" class="btn">
+        </form>
+
+    </div>
+    
+    <section class="location-section" id="Kirirom">
+        <h2 class="location-title">Kirirom</h2>
+        <p> <img th:class="images" id="KT2" src="images/Kirirom_2.jpeg" alt="Kirirom" width="100" height="100">
+            Located at Phnom Sruoch district in the province of Kampong Speu, Kirirom National Park is established on
+            a seven hundred meters hill covering an area of over thirty five thousand hectares in the Elephant
+            Mountains. The name 'Kirirom' meaning Mountain of Joy was given to it by the King of Cambodia. Kirirom
+            National Park, a high altitude plateau, is known for its unique high elevation pine forest, which forms
+            the headwaters for numerous streams feeding Kampong Speu Town.
+            <br><br>
+            This park is part of the 'Southwest Cluster Protected Areas' which include Phnom Bokor, Preah Sihanouk
+            and Kep National Parks. Attractions at this hill station of Kirirom are its spectacular scenery and its 
+            astonishing waterfalls.
+            <br><br>
+            This park is also the home to many endangered species of animals such as Pleated gibbon, sun bear and
+            tiger . You can take a ride in the traditional ox-cart ride or trek along the walking trails among the
+            pine trees. Since this natural resort is located one hundred and twenty kilometers to the west of Phnom
+            Penh, visitors can hire taxis to get here. Traveling along National Road No. 4 will also get you here.
+            <br><br>
+            <img th:class="images" id="KT1" src="images/Kirirom_1.jpg" alt="Kirirom" width="100" height="100">
+
+            The Kirirom National Park, whose official name is Preah Suramarith Kossmak, is about 80,000 acres of
+            forested land on a rare plateau in southwestern Cambodia.
+            <br><br>
+            The elevation is about 2,200 feet, high enough to support a large pine forest quite distinct from most
+            of the country's tropical jungle. Our last stop in the park was a newly renovated visitors center which
+            was small but quite impressive.
+            <br><br>
+            The visitors center has some really attractive displays although there are too many for such a small
+            space. Still it was refreshing to see such high standards applied to the center.
+        </p>
+    <div id="map"></div>
+    </section>
+    
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About Us</h3>
+                <p>We, at Laid-Back Travel, are very happy that you have visited our websites. We are a small group of
+                    people that want nothing more than to guide those who want to travel around Cambodia, experience its
+                    culture, food and visit many of its wonderful places.</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a th:href="@{index#home}">Home</a>
+                <a th:href="@{index#packages}">Packages</a>
+                <a th:href="@{index#locations}">Locations</a>
+                <a th:href="@{index#review}">Review</a>
+                <a th:href="@{index#contact}">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <h1 class="copyright"> Copyright &copy; 2023 </h1>
+
+    </section>
+
+    <script src="../../script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" ></script>
+    <script>initMap(11.4, 104.38, 11)</script>
+</body>
+
+</html>
